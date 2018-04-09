@@ -1,0 +1,54 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.AppEvnts;
+
+type
+  TForm1 = class(TForm)
+    ApplicationEvents1: TApplicationEvents;
+    procedure ApplicationEvents1Exception(Sender: TObject; E: Exception);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.ApplicationEvents1Exception(Sender: TObject; E: Exception);
+var
+  LogFile: TextFile; // текстовый лог-файл
+  FileName: string; // путь и имя лог-файла
+begin
+  // имя лог файла сделать таким же как имя приложения, но
+  // с расширением log
+  FileName := ChangeFileExt(Application.ExeName, 'log');
+
+  AssignFile(LogFile, FileName);
+
+  // если файл существует, перезаписать, иначе создать
+  if FileExists(FileName) then
+    Append(LogFile) // открыть существующий файл
+  else
+    Rewrite(LogFile); // создать новый файл
+
+  try
+    // записать дату+время и текст ошибки в лог-файл
+    Writeln(LogFile, DateTimeToStr(Now) + ' ' + E.Message);
+    // показать ошибку
+    Application.ShowException(E);
+  finally
+    CloseFile(LogFile); // закрыть файл
+  end;
+
+end;
+
+end.

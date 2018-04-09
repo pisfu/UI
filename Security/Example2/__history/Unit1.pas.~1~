@@ -1,0 +1,44 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Memo1: TMemo;
+    Button1: TButton;
+    Edit3: TEdit;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+Var a,b:integer;
+rez:extended;
+begin
+a:=strtoint(Edit1.Text);
+b:=strtoint(Edit2.Text);
+rez:=a/b;
+Edit3.Text:=floattostr(rez);
+Memo1.Lines.Add(Edit1.Text);
+Memo1.Lines.Add(Edit2.Text);
+Memo1.Lines.Add(inttostr(a+b));
+end;
+Memo1.Lines.Add(floattostr(rez));
+
+end.

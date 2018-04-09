@@ -1,0 +1,58 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Memo1: TMemo;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+Var a,b:integer;
+rez:extended;
+begin
+try
+a:=strtoint(Edit1.Text);
+b:=strtoint(Edit2.Text);
+rez:=a/b;
+except
+on EZeroDivide do
+begin
+ShowMessage('Попытка деления на ноль!');
+Edit2.SetFocus;
+end;
+on EConvertError do ShowMessage('Ошибка преобразования!')
+else ShowMessage('Ошибка в защищённом блоке!');
+end;
+Memo1.Lines.Add('первое число:'+Edit1.Text);
+Memo1.Lines.Add('второе число:'+Edit2.Text);
+Memo1.Lines.Add('сумма:'+inttostr(a+b));
+Memo1.Lines.Add('результат деления:'+floattostr(rez));
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+memo1.Lines.Clear;
+end;
+
+end.
