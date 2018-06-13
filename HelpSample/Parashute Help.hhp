@@ -1,0 +1,20 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=Parashute Help.chm
+Contents file=Table of Contents.hhc
+Default topic=Справочная система Windows.htm
+Display compile progress=No
+Index file=Index.hhk
+Language=0x419 Русский (Россия)
+Title=Главная страница
+
+
+[FILES]
+Справочная система Windows.htm
+optiSLang-apas01.html
+optiSLang-apas02.html
+optiSLang-apas03.html
+optiSLang-apas04.html
+
+[INFOTYPES]
+

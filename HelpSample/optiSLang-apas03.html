@@ -1,0 +1,113 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Python Modules</title><link rel="stylesheet" type="text/css" href="css/dynardo.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="optiSLang-index.html" title="optiSLang"><link rel="up" href="optiSLang-apa.html" title="Interfaces and External Tools"><link rel="prev" href="optiSLang-apas02.html" title="Monitoring database file (omdb)"><link rel="next" href="optiSLang-apas04.html" title="optiSLang Excel Add-In"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Python Modules</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="optiSLang-apas02.html">Prev</a> </td><th width="60%" align="center">Interfaces and External Tools </th><td width="20%" align="right"> <a accesskey="n" href="optiSLang-apas04.html">Next</a></td></tr></table><hr></div><div lang="en" class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="DynDoc.Appendix.Pythonmodules"></a>Python Modules</h2></div></div></div>
+
+
+    
+    
+    <p class="optiSLang">Several python examples can be found <a class="link" href="optiSLang-ch11s02.html" title="Python Examples">here</a>.</p>
+
+    <div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem"><p><span class="command"><strong>Modules</strong></span></p>
+            <p>Get a detailed help for each module can be obtained by calling <code class="prompt">help</code> with the module as parameter after importing it within the <a class="link" href="optiSLang-ch05s02.html#DynDoc.UserInterface.Console">Python console</a>, e.g.:</p>
+            <p> &gt; <code class="prompt">import PyOptimizerBase</code> </p>
+            <p> &gt; <code class="prompt">import PyNOA</code> </p>
+            <p> &gt; <code class="prompt">help(PyNOA)</code></p>
+            <p>A list of available classes and functions will appear in the python console window.</p>
+            <p>Available python modules:</p>
+            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                    <div class="itemizedlist"><p class="title"><b>Data types</b></p><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>id</p>
+                            <p>Helper classes to access objects in <span xmlns:fo="http://www.w3.org/1999/XSL/Format" style="color:#FF6600">optiSLang</span>.</p>
+                        </li><li class="listitem"><p>py_algorithm_info</p>
+                            <p>Provides information about algorithms used in omdbs.</p>
+                        </li><li class="listitem"><p>py_omdb</p>
+                            <p>Provides functions to handle <a class="link" href="optiSLang-apas02.html" title="Monitoring database file (omdb)">omdb files</a>.</p>
+                        </li><li class="listitem"><p>py_os_criterion</p>
+                            <p>Definition of <a class="link" href="optiSLang-apbs01s03.html#DynDoc.DataTypes.Criteria" title="Criteria">criteria</a> as objectives, constraints or limit state functions.</p>
+                        </li><li class="listitem"><p>py_os_design</p>
+                            <p>This module offers functions to modify or export <a class="link" href="optiSLang-apbs01s03.html#DynDoc.DataTypes.DesignManager" title="Design Manager">designs</a> or to extract design information.</p>
+                        </li><li class="listitem"><p>py_os_parameter</p>
+                            <p>This module offers functions to create a <a class="link" href="optiSLang-apbs01s03.html#DynDoc.DataTypes.ParameterManager" title="Parameter Manager">parametermanager</a>.</p>
+                        </li><li class="listitem"><p>py_random_variables</p>
+                            <p>This module offers types to define random variables.</p>
+                        </li><li class="listitem"><p>py_transform</p>
+                            <p>This module offers transformation functions.</p>
+                        </li><li class="listitem"><p>pyvariant</p>
+                            <p>Data type <a class="link" href="optiSLang-apbs01s04.html#DynDoc.DataTypes.Variant" title="Variant">"Variant"</a> can be used with this module.</p>
+                        </li><li class="listitem"><p>stdcpp_python_export</p>
+                            <p>Some <a class="link" href="optiSLang-apbs01.html#DynDoc.DataTypes.Table">general data types</a> (vectors, lists or sets of strings, doubles or ints) are available within this module</p>
+                        </li></ul></div>
+                </li><li class="listitem">
+                    <div class="itemizedlist"><p class="title"><b>Kernel - imported by default</b></p><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>_optiSLang_Actors</p>
+                            <p>This module offers available <span xmlns:fo="http://www.w3.org/1999/XSL/Format" style="color:#FF6600">optiSLang</span> actors.</p>
+                        </li><li class="listitem"><p>_optiSLang_Kernel</p>
+                            <p>This module offers systems and functions to create simulation chains.</p>
+                        </li></ul></div>
+                </li><li class="listitem">
+                    <div class="itemizedlist"><p class="title"><b>Postprocessing</b></p><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>py_monitoring_gui</p>
+                            <p>Contains classes to control visuals in <a class="link" href="optiSLang-ch08.html" title="Postprocessing">Postprocessing</a>.</p>
+                        </li><li class="listitem"><p>py_monitoring_kernel</p>
+                            <p>This module offers functions to handle monitoring data.</p>
+                        </li><li class="listitem"><p>py_osl3binfile</p>
+                            <p>This module offers methods to write a binfile using parametermanager and designs.</p>
+                        </li></ul></div>
+                </li><li class="listitem">
+                    <div class="itemizedlist"><p class="title"><b>Algorithm</b></p><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p>dynardo_py_algorithms</p>
+                            <p>Definition of algorithm enums (DOETYPES, DeterministicType, ParameterType, RandomVariableKind, RandomVariableType) and types (DeterministicTypeVec, bitset_type, matrix_type, vector_type).</p>
+                        </li><li class="listitem"><p>os_doe_py_export</p>
+                            <p>This module offers methods for Design of Experiments.</p>
+                        </li><li class="listitem"><p>py_doe_settings</p>
+                            <p>Settings for DoE caclulations can be defined using this module.</p>
+                        </li><li class="listitem"><p>PyARSM</p>
+                            <p>This module offers settings and methods for the Approximation of Response Surface Method.</p>
+                        </li><li class="listitem"><p>PyMemetic</p>
+                            <p>This module offers settings and methods for the Memetic Algorithm.</p>
+                        </li><li class="listitem"><p>PyNLPQLP</p>
+                            <p>This module offers settings and functions for the NLPQLP algorithm.</p>
+                        </li><li class="listitem"><p>PyNOA</p>
+                            <p>This module offers settings and methods for nature-inspired optimization algorithms as EA and PSO.</p>
+                        </li><li class="listitem"><p>PyOptimizerBase</p>
+                            <p>The base class for optimization algorithms to set common objects as bounds and start designs.</p>
+                        </li><li class="listitem"><p>PySimplex</p>
+                            <p>This module offers settings and methods for the Simplex Algorithm.</p>
+                        </li></ul></div>
+                </li></ul></div>
+        </li><li class="listitem"><p><span class="command"><strong>Actors</strong></span></p>
+            <p>Get a detailed help for all actors within the <a class="link" href="optiSLang-ch05s02.html#DynDoc.UserInterface.Console">Python console</a>, e.g.</p>
+            <p> &gt; <code class="prompt">help(actors)</code> </p>
+            <p> or for each actor separated by </p>
+            <p> &gt; <code class="prompt">help(actors.SensitivityActor)</code> </p>
+            <p>The actor class is the base class for all following nodes and systems. Adding input and output slots can be done here. Set and Get functionality for special properties are available for each derived actor.</p>
+            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="command"><strong>Enums</strong></span></p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s01s01s03.html#DynDoc.Nodes.Algorithms.Other.BinfileWriting">UpdateBinFileInterval</a> </strong></span></p>
+                            <p>Enum to define when to write a binfile.</p>
+                            <p>AT_THE_END = _optiSLang_Actors.UpdateBinFileInterval.AT_THE_END</p>
+                            <p>EVERY_DESIGN = _optiSLang_Actors.UpdateBinFileInterval.EVERY_DESIGN</p>
+                            <p>EVERY_ITERATION = _optiSLang_Actors.UpdateBinFileInterval.EVERY_ITERATION</p>
+                            <p>NEVER = _optiSLang_Actors.UpdateBinFileInterval.NEVER </p>
+                        </li></ul></div>
+                </li><li class="listitem">
+                    <div class="itemizedlist"><p class="title"><b>Nodes</b></p><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s03s02s01.html" title="Calculator Dialog">CalculatorSetActor</a></strong></span></p> <p>Possibility to define outputs using mathematical expressions. </p></li><li class="listitem"><p><span class="command"><strong>DistinctWorkingDirActor</strong></span></p>  <p>The following nodes are derived from DistinctWorkingDirActor.  </p>
+                            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s01.html" title="Integrations">IntegrationBaseActor</a></p> <p>Adding parameter can be done in this class. Special properties can be set within the derived actor classes.</p>
+                                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s01s03.html" title="ANSYS">AnsysWorkbenchActor</a></p>
+                                        <p>Methods to add parameter, responses, input and output slots and to establish a connection to <span xmlns:fo="http://www.w3.org/1999/XSL/Format">ANSYS</span>.</p></li><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s03.html" title="Output Nodes">ETKActor</a> and derived classes <a class="link" href="optiSLang-ch07s02s03s01.html" title="Text Output">ETKTextOutputActor</a>, <a class="link" href="optiSLang-ch07s02s03s02s01.html" title="ETK Abaqus">ETKAbaqusActor</a></p></li><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s04s02.html" title="Process">ProcessActor</a> and derived classes <a class="link" href="optiSLang-ch07s02s04s03.html" title="Script Execution">BashScriptActor, BatchScriptActor, PerlScriptActor, PythonScriptActor</a> and <a class="link" href="optiSLang-ch07s02s04s01.html" title="Abaqus Process">AbaqusProcessActor</a></p></li><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s01s04.html" title="MATLAB/Octave">MatlabActor</a></p> </li><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s01s05s01.html" title="MOP Solver">MopsolverActor</a></p> </li><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s01s06.html" title="Python 2">Python2Actor</a></p></li><li class="listitem"><p><a class="link" href="optiSLang-ch07s02s02s01.html" title="Text Input">TextInputActor</a></p></li></ul></div>
+                                </li></ul></div>
+                        </li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s03s01s01.html" title="Metamodel of Optimal Prognosis">MOPActor</a></strong></span></p> <p> </p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s04s02.html#DynDoc.Nodes.Path" title="Path">PathActor</a></strong></span></p> <p> </p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s03s05.html#DynDoc.Nodes.Postprocessing">PostprocessingActor</a></strong></span></p> <p> </p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s04s02.html#DynDoc.Nodes.Variable" title="Variable">VariableActor</a></strong></span></p> <p> </p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s03s04.html" title="Monitoring">VariantMonitoringActor</a></strong></span></p> <p> </p></li></ul></div>
+
+                </li><li class="listitem"><p><span class="command"><strong>Sequencing Systems</strong></span></p>
+                    <p>For a detailed list of available methods see </p>
+                    <p> &gt;<code class="prompt">help(SequencingSystem) </code></p>
+                    <p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s01s01.html" title="Parametric System">ParametricSystemActor</a></strong></span></p>
+                    <p>This actor class is the base of all algorithm actors (systems). Parameter, criteria, results, start designs and designs are managed here.</p>
+                    <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: circle; "><li class="listitem"><p><span class="command"><strong>AlgorithmSystemActor</strong></span></p>
+                        <p>This class offers functionality for binfile writing. Algorithm settings can be modified using the set functionality of specific algorithm actors.</p>
+                            <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: square; "><li class="listitem">
+                                    <div class="itemizedlist"><p class="title"><b><a class="link" href="optiSLang-ch07s01s02s05.html" title="Optimization Strategies">OptimizationBaseActor</a></b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s02s05s02.html" title="Adaptive Response Surface Method">ARSMActor</a></strong></span></p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s02s05s04.html" title="NLPQL">NLPQLPActor</a></strong></span></p></li><li class="listitem"><p><span class="command"><strong>NOAActor</strong></span> (<a class="link" href="optiSLang-ch07s01s02s05s05.html" title="Evolutionary Algorithm">EAActor</a>, <a class="link" href="optiSLang-ch07s01s02s05s07.html" title="Particle Swarm Optimization">PSOActor</a>, <a class="link" href="optiSLang-ch07s01s02s05s08.html" title="Stochastic Design Improvement">SDIActor</a>)</p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s02s05s03.html" title="Simplex Method">SimplexActor</a></strong></span></p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s02s05s06.html" title="Memetic">MemeticActor</a></strong></span></p></li></ul></div>
+                                </li><li class="listitem">
+                                    <div class="itemizedlist"><p class="title"><b>SamplingActor</b></p><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s02s04.html" title="Sensitivity Analysis">SensitivityActor</a></strong></span> </p></li><li class="listitem"><p><span class="command"><strong><a class="link" href="optiSLang-ch07s01s02s06.html" title="Robustness Analysis">RobustnessActor</a></strong></span> </p></li></ul></div>
+                                </li></ul></div>
+                        </li></ul></div>
+                </li></ul></div>
+
+        </li></ol></div>
+
+
+
+</div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="optiSLang-apas02.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="optiSLang-apa.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="optiSLang-apas04.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Monitoring database file (omdb) </td><td width="20%" align="center"><a accesskey="h" href="optiSLang-index.html">Home</a> | <a accesskey="t" href="optiSLang-bk01-toc.html">ToC</a></td><td width="40%" align="right" valign="top"> <span xmlns:fo="http://www.w3.org/1999/XSL/Format" style="color:#FF6600">optiSLang</span><span xmlns:fo="http://www.w3.org/1999/XSL/Format"> Excel Add-In</span></td></tr></table></div></body></html>
