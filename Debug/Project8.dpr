@@ -1,0 +1,14 @@
+program Project8;
+
+uses
+  Forms,
+  pjct in 'pjct.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.
